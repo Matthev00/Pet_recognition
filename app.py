@@ -12,7 +12,7 @@ def main():
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     # # Setup class names
     with open("class_names.txt", "r") as filehandle:
-        class_names = [food_name.strip() for food_name in filehandle.readlines()] # noqa 5501
+        class_names = [bread.strip() for bread in filehandle.readlines()] # noqa 5501
 
     # # Create model
     model, model_transforms = create_effnetb2(
